@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-});
+  plugins: [vue()],
+  server: {
+    host: true,
+    port: 4173
+  },
+  preview: {
+    host: true,
+    port: 4173
+  }
+})
